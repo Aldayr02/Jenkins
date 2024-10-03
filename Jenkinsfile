@@ -11,8 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh '/home/ec2-user/jenkins_home/python3 code.py'
-                
+                sh 'python3 code.py'  // Usar python3 del PATH
             }
         }
         stage('Deploy') {
