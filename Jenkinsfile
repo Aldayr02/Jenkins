@@ -11,7 +11,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'cat code.py'
+                sh 'echo $PATH'  // Verifica el PATH disponible en Jenkins
+                sh 'which python3'  // Verifica si python3 está en el PATH
+                sh 'python3 code.py'  // Ejecuta el script
             }
         }
         stage('Deploy') {
