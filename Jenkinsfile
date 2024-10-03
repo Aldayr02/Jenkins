@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                python  // Agrega Python al PATH
+                sh 'python'  // Agrega Python al PATH
             }
         }
         stage('Deploy') {
