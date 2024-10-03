@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'sudo cat code.py'  // Usar python3 del PATH
+                cat code.py
             }
         }
         stage('Deploy') {
