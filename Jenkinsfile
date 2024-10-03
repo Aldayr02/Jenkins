@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'python3 code.py'  // Usar python3 del PATH
+                sh 'which python3'  // Usar python3 del PATH
             }
         }
         stage('Deploy') {
