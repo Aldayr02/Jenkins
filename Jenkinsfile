@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh 'echo $PATH'  // Verifica el PATH disponible en Jenkins
-                sh 'which python3'  // Verifica si python3 está en el PATH
+                sh 'where python3'  // Verifica si python3 está en el PATH
                 sh 'python3 code.py'  // Ejecuta el script
             }
         }
