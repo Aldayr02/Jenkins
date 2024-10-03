@@ -5,12 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                checkout scm
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                /home/ec2-user/jenkins_home/python3 code.py
+                sh '/home/ec2-user/jenkins_home/python3 code.py'
                 
             }
         }
